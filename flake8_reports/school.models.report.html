@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: school\models.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="school.models.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               school\models.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'datetime.datetime' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="school.models.source.html#l3">
+                  <tt><i>3</i> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  9
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="school.models.source.html#l48">
+                  <tt><i>48</i>     <span class="n">niveau</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Niveau</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;classe_niveau&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="school.models.source.html#l66">
+                  <tt><i>66</i>     <span class="n">classe</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Classe</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;classe_chapitre&#39;</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="school.models.source.html#l67">
+                  <tt><i>67</i>     <span class="n">matiere</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Matiere</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;matiere_chapitre&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="school.models.source.html#l95">
+                  <tt><i>95</i>     <span class="n">chapitre</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Chapitre</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;cours_chapitre&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="school.models.source.html#l97">
+                  <tt><i>97</i>     <span class="n">video</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FileField</span><span class="p">(</span><span class="n">upload_to</span><span class="o">=</span><span class="s2">&quot;ressources/cours&quot;</span><span class="p">,</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E303:</strong> too many blank lines (3)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="school.models.source.html#l21">
+                  <tt><i>21</i>     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="school.models.source.html#l40">
+                  <tt><i>40</i>     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="school.models.source.html#l57">
+                  <tt><i>57</i>     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="school.models.source.html#l85">
+                  <tt><i>85</i>     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (2):</p>
+               
+               <a href="school.models.source.html#l110">
+                  <tt><i>110</i>     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E501:</strong> line too long (92 > 79 characters)
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (92 > 79 characters):</p>
+               
+               <a href="school.models.source.html#l48">
+                  <tt><i>48</i>     <span class="n">niveau</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Niveau</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;classe_niveau&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (107 > 79 characters):</p>
+               
+               <a href="school.models.source.html#l50">
+                  <tt><i>50</i>     <span class="c1"># filiere = models.ForeignKey(Filiere,on_delete=models.CASCADE,related_name=&#39;classe_filiere&#39;,null=True)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (105 > 79 characters):</p>
+               
+               <a href="school.models.source.html#l66">
+                  <tt><i>66</i>     <span class="n">classe</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Classe</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;classe_chapitre&#39;</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (97 > 79 characters):</p>
+               
+               <a href="school.models.source.html#l67">
+                  <tt><i>67</i>     <span class="n">matiere</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Matiere</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;matiere_chapitre&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (97 > 79 characters):</p>
+               
+               <a href="school.models.source.html#l95">
+                  <tt><i>95</i>     <span class="n">chapitre</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Chapitre</span><span class="p">,</span><span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span><span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;cours_chapitre&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="school.models.source.html#l18">
+                  <tt><i>18</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="school.models.source.html#l54">
+                  <tt><i>54</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="school.models.source.html#l63">
+                  <tt><i>63</i>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="school.models.source.html#l65">
+                  <tt><i>65</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="school.models.source.html#l28">
+                  <tt><i>28</i> <span class="k">class</span> <span class="nc">Niveau</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="school.models.source.html#l47">
+                  <tt><i>47</i> <span class="k">class</span> <span class="nc">Classe</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="school.models.source.html#l64">
+                  <tt><i>64</i> <span class="k">class</span> <span class="nc">Chapitre</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace around operator (in 2 places):</p>
+               
+               <a href="school.models.source.html#l62">
+                  <tt><i>62</i>         <span class="k">return</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">niveau</span><span class="o">.</span><span class="n">nom</span><span class="p">)</span><span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">numeroClasse</span><span class="p">))</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="school.models.source.html#l96">
+                  <tt><i>96</i>     <span class="n">image</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span><span class="n">upload_to</span><span class="o">=</span><span class="s1">&#39;images/cours&#39;</span> <span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W391">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W391:</strong> blank line at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="school.models.source.html#l118">
+                  <tt><i>118</i> &nbsp;</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

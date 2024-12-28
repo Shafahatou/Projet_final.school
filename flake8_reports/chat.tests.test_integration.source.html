@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>chat\tests\test_integration.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <h1>
+            <a href="chat.tests.test_integration.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               chat\tests\test_integration.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">TestCase</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="kn">from</span> <span class="nn">chat.models</span> <span class="kn">import</span> <span class="n">Salon</span><span class="p">,</span> <span class="n">Message</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="kn">from</span> <span class="nn">school.models</span> <span class="kn">import</span> <span class="n">Classe</span><span class="p">,</span> <span class="n">Niveau</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> &nbsp;</tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="k">class</span> <span class="nc">ChatIntegrationTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i>     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (89 > 79 characters)</li>
+               
+               </ul><tt><i>9</i>         <span class="bp">self</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;testuser&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password123&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i>         <span class="bp">self</span><span class="o">.</span><span class="n">niveau</span> <span class="o">=</span> <span class="n">Niveau</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">nom</span><span class="o">=</span><span class="s2">&quot;Terminale&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i>         <span class="bp">self</span><span class="o">.</span><span class="n">classe</span> <span class="o">=</span> <span class="n">Classe</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">niveau</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">niveau</span><span class="p">,</span> <span class="n">numeroClasse</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (83 > 79 characters)</li>
+               
+               </ul><tt><i>12</i>         <span class="bp">self</span><span class="o">.</span><span class="n">salon</span> <span class="o">=</span> <span class="n">Salon</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">classe</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">classe</span><span class="p">,</span> <span class="n">nom</span><span class="o">=</span><span class="s2">&quot;Chat Terminale&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> &nbsp;</tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i>     <span class="k">def</span> <span class="nf">test_salon_message_relationship</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Test de la relation entre Salon et Message&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F841
+                     </span>
+                     Local variable 'message' is assigned to but never used</li>
+               
+               </ul><tt><i>16</i>         <span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i>             <span class="n">auteur</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i>             <span class="n">salon</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">salon</span><span class="p">,</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i>             <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Message de test&quot;</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i>         <span class="p">)</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">salon</span><span class="o">.</span><span class="n">salon</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">salon</span><span class="o">.</span><span class="n">salon</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="s2">&quot;Message de test&quot;</span><span class="p">)</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

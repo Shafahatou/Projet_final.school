@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: instructor\views.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="instructor.views.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               instructor\views.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F401:</strong> 'django.http.HttpResponse' imported but unused
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'django.http.HttpResponse' imported but unused:</p>
+               
+               <a href="instructor.views.source.html#l4">
+                  <tt><i>4</i> <span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">JsonResponse</span><span class="p">,</span> <span class="n">HttpResponse</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'django.db.models.Count' imported but unused:</p>
+               
+               <a href="instructor.views.source.html#l8">
+                  <tt><i>8</i> <span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">Avg</span><span class="p">,</span> <span class="n">Count</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'student.models.Student' imported but unused:</p>
+               
+               <a href="instructor.views.source.html#l17">
+                  <tt><i>17</i> <span class="kn">from</span> <span class="nn">student.models</span> <span class="kn">import</span> <span class="n">Student</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  24
+               </span>
+               <strong>E501:</strong> line too long (112 > 79 characters)
+               
+                  (and 13 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (112 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l298">
+                  <tt><i>298</i>         <span class="n">taken_quizzes</span> <span class="o">=</span> <span class="n">quiz_models</span><span class="o">.</span><span class="n">TakenQuiz</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">quiz__in</span><span class="o">=</span><span class="n">quizzes</span><span class="p">)</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">&#39;student&#39;</span><span class="p">,</span> <span class="s1">&#39;quiz&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l325">
+                  <tt><i>325</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;pages/instructor-quiz-edit-questions.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l348">
+                  <tt><i>348</i>         <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;pages/instructor-question-add.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;quiz&#39;</span><span class="p">:</span> <span class="n">quiz</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l361">
+                  <tt><i>361</i>     <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">quiz_models</span><span class="o">.</span><span class="n">Question</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">question_id</span><span class="p">,</span> <span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l369">
+                  <tt><i>369</i>         <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;question_edit&#39;</span><span class="p">,</span> <span class="n">quiz_id</span><span class="o">=</span><span class="n">quiz</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">question_id</span><span class="o">=</span><span class="n">question</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l376">
+                  <tt><i>376</i>         <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;pages/question-edit-with-answers.html&#39;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (92 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l395">
+                  <tt><i>395</i>         <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Question supprimée avec succès.&#39;</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (90 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l397">
+                  <tt><i>397</i>         <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Cette question n’existe pas.&#39;</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (88 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l414">
+                  <tt><i>414</i>     <span class="n">taken_quizzes</span> <span class="o">=</span> <span class="n">quiz</span><span class="o">.</span><span class="n">taken_quizzes</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">&#39;student__user&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-date&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l418">
+                  <tt><i>418</i>     <span class="n">quiz_score</span> <span class="o">=</span> <span class="n">taken_quizzes</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">average_score</span><span class="o">=</span><span class="n">Avg</span><span class="p">(</span><span class="s1">&#39;score&#39;</span><span class="p">))[</span><span class="s1">&#39;average_score&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (95 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l483">
+                  <tt><i>483</i>             <span class="n">exist_classe</span> <span class="o">=</span> <span class="n">chat_models</span><span class="o">.</span><span class="n">Salon</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">classe</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (89 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l484">
+                  <tt><i>484</i>             <span class="n">info</span> <span class="o">=</span> <span class="n">school_models</span><span class="o">.</span><span class="n">Classe</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">classe</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (93 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l495">
+                  <tt><i>495</i>             <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="s1">&#39;Informations de classe introuvables&#39;</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">404</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l833">
+                  <tt><i>833</i>         <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Réponse supprimée avec succès.&#39;</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (89 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l835">
+                  <tt><i>835</i>         <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Cette réponse n’existe pas.&#39;</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l846">
+                  <tt><i>846</i>     <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">quiz_models</span><span class="o">.</span><span class="n">Question</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">question_id</span><span class="p">,</span> <span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l847">
+                  <tt><i>847</i>     <span class="n">answer</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">quiz_models</span><span class="o">.</span><span class="n">Answer</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">answer_id</span><span class="p">,</span> <span class="n">question</span><span class="o">=</span><span class="n">question</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l851">
+                  <tt><i>851</i>         <span class="n">is_correct</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;is_correct&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="s1">&#39;on&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l857">
+                  <tt><i>857</i>         <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;answer_list&#39;</span><span class="p">,</span> <span class="n">quiz_id</span><span class="o">=</span><span class="n">quiz</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">question_id</span><span class="o">=</span><span class="n">question</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l877">
+                  <tt><i>877</i>     <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">quiz_models</span><span class="o">.</span><span class="n">Question</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">question_id</span><span class="p">,</span> <span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l881">
+                  <tt><i>881</i>         <span class="n">is_correct</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;is_correct&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="s1">&#39;on&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l889">
+                  <tt><i>889</i>         <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;answer_list&#39;</span><span class="p">,</span> <span class="n">quiz_id</span><span class="o">=</span><span class="n">quiz</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">question_id</span><span class="o">=</span><span class="n">question</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (93 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l891">
+                  <tt><i>891</i>         <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;pages/answer-add.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;quiz&#39;</span><span class="p">:</span> <span class="n">quiz</span><span class="p">,</span> <span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="n">question</span><span class="p">})</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="instructor.views.source.html#l905">
+                  <tt><i>905</i>     <span class="n">question</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">quiz_models</span><span class="o">.</span><span class="n">Question</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">question_id</span><span class="p">,</span> <span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  16
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l23">
+                  <tt><i>23</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l43">
+                  <tt><i>43</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l59">
+                  <tt><i>59</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l93">
+                  <tt><i>93</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l108">
+                  <tt><i>108</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l126">
+                  <tt><i>126</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l167">
+                  <tt><i>167</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l208">
+                  <tt><i>208</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l289">
+                  <tt><i>289</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l329">
+                  <tt><i>329</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l433">
+                  <tt><i>433</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l450">
+                  <tt><i>450</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l459">
+                  <tt><i>459</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l499">
+                  <tt><i>499</i> <span class="k">def</span> <span class="nf">message_view</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 4:</p>
+               
+               <a href="instructor.views.source.html#l510">
+                  <tt><i>510</i> <span class="k">def</span> <span class="nf">post_cours</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="instructor.views.source.html#l837">
+                  <tt><i>837</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  13
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l267">
+                  <tt><i>267</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l273">
+                  <tt><i>273</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l539">
+                  <tt><i>539</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l543">
+                  <tt><i>543</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l573">
+                  <tt><i>573</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l577">
+                  <tt><i>577</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l632">
+                  <tt><i>632</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l636">
+                  <tt><i>636</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l640">
+                  <tt><i>640</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l661">
+                  <tt><i>661</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l665">
+                  <tt><i>665</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l669">
+                  <tt><i>669</i>             <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l728">
+                  <tt><i>728</i>         <span class="k">except</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E303">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E303:</strong> too many blank lines (3)
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l352">
+                  <tt><i>352</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l380">
+                  <tt><i>380</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l401">
+                  <tt><i>401</i> <span class="k">def</span> <span class="nf">quiz_results</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">quiz_id</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l506">
+                  <tt><i>506</i> <span class="c1">########################################</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (3):</p>
+               
+               <a href="instructor.views.source.html#l868">
+                  <tt><i>868</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Too many blank lines (4):</p>
+               
+               <a href="instructor.views.source.html#l896">
+                  <tt><i>896</i> <span class="nd">@login_required</span><span class="p">(</span><span class="n">login_url</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l255">
+                  <tt><i>255</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l399">
+                  <tt><i>399</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l893">
+                  <tt><i>893</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l253">
+                  <tt><i>253</i>         <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;/admin/&#39;</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="instructor.views.source.html#l514">
+                  <tt><i>514</i>     <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l500">
+                  <tt><i>500</i>     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span> <span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W391">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W391:</strong> blank line at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="instructor.views.source.html#l915">
+                  <tt><i>915</i> &nbsp;</tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

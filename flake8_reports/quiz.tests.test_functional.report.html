@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: quiz\tests\test_functional.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="quiz.tests.test_functional.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               quiz\tests\test_functional.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  14
+               </span>
+               <strong>E501:</strong> line too long (91 > 79 characters)
+               
+                  (and 7 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l14">
+                  <tt><i>14</i>         <span class="bp">self</span><span class="o">.</span><span class="n">teacher</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;teacher&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password123&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (96 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l17">
+                  <tt><i>17</i>         <span class="bp">self</span><span class="o">.</span><span class="n">student_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;student&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password123&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l21">
+                  <tt><i>21</i>         <span class="bp">self</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="n">Subject</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Mathématiques&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#ff0000&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (97 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l28">
+                  <tt><i>28</i>             <span class="n">classe</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">classe</span><span class="p">,</span> <span class="n">titre</span><span class="o">=</span><span class="s2">&quot;Chapitre 1&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Introduction&quot;</span><span class="p">,</span> <span class="n">duree_en_heure</span><span class="o">=</span><span class="mi">10</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (82 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l33">
+                  <tt><i>33</i>             <span class="n">titre</span><span class="o">=</span><span class="s2">&quot;Algèbre&quot;</span><span class="p">,</span> <span class="n">chapitre</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chapitre</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Cours d&#39;algèbre&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (108 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l42">
+                  <tt><i>42</i>             <span class="n">owner</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">teacher</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Quiz Math&quot;</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subject</span><span class="p">,</span> <span class="n">classe</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">classe</span><span class="p">,</span> <span class="n">cours</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cours</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l46">
+                  <tt><i>46</i>         <span class="n">question</span> <span class="o">=</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Quelle est la valeur de 2+2 ?&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (111 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l50">
+                  <tt><i>50</i>         <span class="n">url</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">(</span><span class="s2">&quot;quiz_detail&quot;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="n">quiz</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>  <span class="c1"># Remplacez &quot;quiz_detail&quot; par le nom exact de votre route</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l55">
+                  <tt><i>55</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Test qu&#39;un étudiant peut prendre un quiz et soumettre des réponses&quot;&quot;&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (111 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l60">
+                  <tt><i>60</i>             <span class="n">owner</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">teacher</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Quiz Science&quot;</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subject</span><span class="p">,</span> <span class="n">classe</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">classe</span><span class="p">,</span> <span class="n">cours</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cours</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l64">
+                  <tt><i>64</i>         <span class="n">question</span> <span class="o">=</span> <span class="n">Question</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Quelle est la valeur de 3+3 ?&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l65">
+                  <tt><i>65</i>         <span class="n">answer</span> <span class="o">=</span> <span class="n">Answer</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">question</span><span class="o">=</span><span class="n">question</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="n">is_correct</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (111 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l68">
+                  <tt><i>68</i>         <span class="n">url</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">(</span><span class="s2">&quot;quiz_submit&quot;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="n">quiz</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>  <span class="c1"># Remplacez &quot;quiz_submit&quot; par le nom exact de votre route</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="quiz.tests.test_functional.source.html#l73">
+                  <tt><i>73</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">TakenQuiz</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">student</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">student</span><span class="p">,</span> <span class="n">quiz</span><span class="o">=</span><span class="n">quiz</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

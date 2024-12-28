@@ -1,0 +1,4 @@
+[flake8]
+exclude = tests,env
+format = html
+output-file = flake8_report.html

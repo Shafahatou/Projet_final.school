@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: student\urls.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="student.urls.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               student\urls.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'django.contrib.auth.views.LogoutView' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="student.urls.source.html#l3">
+                  <tt><i>3</i> <span class="kn">from</span> <span class="nn">django.contrib.auth.views</span> <span class="kn">import</span> <span class="n">LoginView</span><span class="p">,</span><span class="n">LogoutView</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W605">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>W605:</strong> invalid escape sequence '\l'
+               
+                  (and 3 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Invalid escape sequence '\L':</p>
+               
+               <a href="student.urls.source.html#l6">
+                  <tt><i>6</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\g':</p>
+               
+               <a href="student.urls.source.html#l6">
+                  <tt><i>6</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\l':</p>
+               
+               <a href="student.urls.source.html#l6">
+                  <tt><i>6</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\p':</p>
+               
+               <a href="student.urls.source.html#l6">
+                  <tt><i>6</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\L':</p>
+               
+               <a href="student.urls.source.html#l38">
+                  <tt><i>38</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\g':</p>
+               
+               <a href="student.urls.source.html#l38">
+                  <tt><i>38</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\l':</p>
+               
+               <a href="student.urls.source.html#l38">
+                  <tt><i>38</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Invalid escape sequence '\p':</p>
+               
+               <a href="student.urls.source.html#l38">
+                  <tt><i>38</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  4
+               </span>
+               <strong>E501:</strong> line too long (110 > 79 characters)
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (110 > 79 characters):</p>
+               
+               <a href="student.urls.source.html#l6">
+                  <tt><i>6</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (93 > 79 characters):</p>
+               
+               <a href="student.urls.source.html#l24">
+                  <tt><i>24</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;forum_thread/&lt;slug&gt;/reponse&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">post_forum_reponse</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;post_forum_reponse&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (102 > 79 characters):</p>
+               
+               <a href="student.urls.source.html#l33">
+                  <tt><i>33</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;skip_question/&lt;int:quiz_id&gt;/&lt;int:question_id&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">skip_question</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;skip_question&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (110 > 79 characters):</p>
+               
+               <a href="student.urls.source.html#l38">
+                  <tt><i>38</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">LoginView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;school\learnplus\Learn</span><span class="se">\t</span><span class="s1">emplates\pages\guest-login.html&#39;</span><span class="p">)),</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="student.urls.source.html#l16">
+                  <tt><i>16</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="student.urls.source.html#l18">
+                  <tt><i>18</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="student.urls.source.html#l34">
+                  <tt><i>34</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="student.urls.source.html#l7">
+                  <tt><i>7</i>     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;index_student&quot;</span><span class="p">),</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="student.urls.source.html#l9">
+                  <tt><i>9</i>     <span class="c1"># path(&#39;subscription&#39;, views.subscription, name=&#39;subscription&#39;), </span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="student.urls.source.html#l3">
+                  <tt><i>3</i> <span class="kn">from</span> <span class="nn">django.contrib.auth.views</span> <span class="kn">import</span> <span class="n">LoginView</span><span class="p">,</span><span class="n">LogoutView</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E266">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E266:</strong> too many leading '#' for block comment
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="student.urls.source.html#l41">
+                  <tt><i>41</i>     <span class="c1">########## post ###############</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W292">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W292:</strong> no newline at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="student.urls.source.html#l47">
+                  <tt><i>47</i> <span class="p">]</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
